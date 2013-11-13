@@ -2,60 +2,272 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Aplic. Web de jQuery Mobile</title>
-<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
-<link href="CiceGrisMarron.css" rel="stylesheet" type="text/css" media="all">
-<style type="text/css">
-body {
-	background-image: url();
-}
-</style>
-<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
-<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<title>AudioGuiaCicerone</title>
+<link href="css/jquery.mobile.theme-1.3.2.min.css" rel="stylesheet" type="text/css"/>
+<!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="css/codiqa.ext.css">
+  <link rel="stylesheet" href="themes/AudioguiaCicerone.min.css" />
+<link href="css/jquery.mobile.structure-1.3.2.min.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!-- Extra Codiqa features -->
+  <script src="js/codiqa.ext.js"></script>
+<script src="map/jquery.mobile-1.3.2.min.map" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.3.2.min.js" type="text/javascript"></script>
+<script src="js/background_adaptable.js" type="text/javascript"></script>
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<link href="css/CiceGrisMarron.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function () {
+			$(this).jPlayer("setMedia", {
+				m4a: "https://dl.dropboxusercontent.com/u/4103763/audiosCICE/Mezclado/0%20ok.mp3",
+				oga: ""
+			});
+		},
+		play: function() { // To avoid multiple jPlayers playing together.
+			$(this).jPlayer("pauseOthers");
+		},
+		swfPath: "js",
+		supplied: "m4a, oga",
+		wmode: "window",
+		smoothPlayBar: true,
+		keyEnabled: true
+	});
+
+	$("#jquery_jplayer_2").jPlayer({
+		ready: function () {
+			$(this).jPlayer("setMedia", {
+				m4a: "",
+				oga: ""
+			});
+		},
+		play: function() { // To avoid multiple jPlayers playing together.
+			$(this).jPlayer("pauseOthers");
+		},
+		swfPath: "js",
+		supplied: "m4a, oga",
+		cssSelectorAncestor: "#jp_container_2",
+		wmode: "window",
+		smoothPlayBar: true,
+		keyEnabled: true
+	});
+
+	$("#jquery_jplayer_3").jPlayer({
+		ready: function () {
+			$(this).jPlayer("setMedia", {
+				m4a: "",
+				oga: ""
+			});
+		},
+		play: function() { // To avoid multiple jPlayers playing together.
+			$(this).jPlayer("pauseOthers");
+		},
+		swfPath: "js",
+		supplied: "m4a, oga",
+		cssSelectorAncestor: "#jp_container_3",
+		wmode: "window",
+		smoothPlayBar: true,
+		keyEnabled: true
+	});
+
+
+});
+//]]>
+</script>
 </head> 
-<body> 
+<body>
+<div data-role="page" id="page">
+<img src="Images/fondo_inicio_cc.jpg" alt="Fondo de pantalla" id="bg" />
+<div data-role="header">
+    <div id="menuprincipal" data-role="navbar" data-iconos="top" class="menubar">
+            <ul>
+                <li>
+                    <a href="#page" data-transition="fade" data-theme="a" data-icon="star"
+                    class="ui-btn-active ui-state-persist">
+                        AudioGuía
+                    </a>
+                </li>
+                <li>
+                    <a href="#page1" data-transition="fade" data-theme="a" data-icon="forward">
+                        Ruta
+                    </a>
+                </li>
+                <li>
+                    <a href="/glosario.html" data-transition="fade" data-theme="a" data-icon="gear">
+                        Glosario
+                    </a>
+                </li>
+                <li>
+                    <a href="#page1" data-transition="fade" data-theme="a" data-icon="bars">
+                        Agenda
+                    </a>
+                </li>
+                <li>
+                    <a href="#page1" data-transition="fade" data-theme="a" data-icon="info">
+                        info
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+		
+	</div>
+<div data-role="content">
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
-<div id="page" data-role="page">
-	<div class="ui-bar-a" data-role="header">
-		<h1 class="ui-bar-a">AudioGuía Turística-Histórica</h1>
+		<div id="jp_container_1" class="jp-audio">
+			<div class="jp-type-single">
+				<div class="jp-gui jp-interface">
+					<ul class="jp-controls">
+						<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+						<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+						<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+						<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+						<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+						<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+					</ul>
+					<div class="jp-progress">
+						<div class="jp-seek-bar">
+							<div class="jp-play-bar"></div>
+						</div>
+					</div>
+					<div class="jp-volume-bar">
+						<div class="jp-volume-bar-value"></div>
+					</div>
+					<div class="jp-time-holder">
+						<div class="jp-current-time"></div>
+						<div class="jp-duration"></div>
+
+						<ul class="jp-toggles">
+							<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+							<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="jp-title">
+					<ul>
+						<li>Bienvenido a Cáceres.</li>
+						<li>Ciudad Patrimonio de la Humanidad</li>
+                        <li> </li>
+					</ul>
+				</div>
+				<div class="jp-no-solution">
+					<span>Update Required</span>
+					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+				</div>
+			</div>
+		</div>
+    <div data-role="content">	
+		<ul data-role="listview" data-divider-theme="a" data-inset="true">
+            <li data-role="list-divider" role="heading">
+            Monumentos y sitios de interés </li>
+            <li data-theme="e">
+                <a href="#page2" data-transition="slide"><img src="/ImagenesMonumentos/menus/imag_menus_80x80_.jpg" alt="inicio todos" name="ImagmenuTodos" width="80" height="80" id="ImagmenuTodos">
+                    Todos
+                    <span class="ui-li-count">
+                        Ruta completa
+                    </span>
+                </a>
+            </li>
+            <li data-theme="e">
+                <a href="#page1" data-transition="slide"><img src="/ImagenesMonumentos/menus/imag_menus_80x80_iglesias.jpg" alt="inicio iglesias" name="ImagmenuIglesias" width="80" height="80" id="ImagmenuIglesias">
+                    Iglesias
+                    <span class="ui-li-count">
+                        Catedrales, conventos, hermitas
+                    </span>
+                </a>
+            </li>
+            <li data-theme="e">
+                <a href="#page1" data-transition="slide"><img src="/ImagenesMonumentos/menus/imag_menus_80x80_plazas.jpg" alt="inicio plazas" name="ImagmenuPlazas" width="80" height="80" id="ImagmenuPlazas">
+                    Plazas y Jardines
+                    <span class="ui-li-count">
+                        Espacios públicos
+                    </span>
+                </a>
+            </li>
+            <li data-theme="e">
+                <a href="#page1" data-transition="slide"><img src="/ImagenesMonumentos/menus/imag_menus_80x80_muralla.jpg" alt="inicio muralla" name="ImagmenuMuralla" width="80" height="80" id="ImagmenuMuralla">
+                    Muralla
+                    <span class="ui-li-count">
+                        Torres y arcos
+                    </span>
+                </a>
+            </li>
+            <li data-theme="e">
+                <a href="#page1" data-transition="slide"><img src="/ImagenesMonumentos/menus/imag_menus_80x80_palacios.jpg" alt="inicio palacios" name="ImagmenuPalacios" width="80" height="80" id="ImagmenuPalacios">
+                    Palacios
+                    <span class="ui-li-count">
+                        Casas señoriales
+                    </span>
+                </a>
+            </li>
+        </ul>		
 	</div>
-	<div data-role="content"><img src="fd_cc_1.333.png" alt="panorámica Cáceres" width="1026" height="333" align="absmiddle"><img src="sc_cc.png" alt="Escudo Cáceres" width="96" height="96" align="left">
-	  <div data-role="content">
-        <p align="center">	
-          <em>Bienvenidos a Cáceres</em></p>
-        <p align="center"><em>Ciudad Patrimonio de la Humanidad</em></p>
-        <p align="center">&nbsp;</p>
-  </div>
-	  <ul data-role="listview" data-divider-theme="a">
-	  <li><img src="imag_cice_cc_mon_200.png" alt="iconoCice_mon" width="40" height="40" align="left"><a href="#page2">Monumentos</a></li>
-            <li><li><img src="imag_cice_cc__ruta_200.png" alt="iconoRuta" width="40" height="40" align="left"><a href="#page3">Rutas</a></li>
-			<li><li><img src="imag_cice_cc_info_200.png" alt="iconoInfo" width="40" height="40" align="left"><a href="#page4">Información</a></li>
-	  </ul>		
-  </div>
-  
-	<div class="ui-bar-a" data-role="footer">
-		<h4 class="ui-bar-a">Cicerone de Cáceres</h4>
-	</div>
+    </div>
+        <div data-role="collapsible" data-theme="a" data-content-theme="e" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+    <h4>ver texto de Bienvenida</h4>
+    <ul data-role="listview" data-inset="false">
+        <li>Bienvenidos a la ciudad de <strong>Cáceres</strong>. Antes de comenzar la visita les damos la enhorabuena por haber elegido esta ciudad cargada de historia. Deléitense con sus Palacios, sus Casas Señoriales, sus iglesias, sus calles por donde han pasado personajes muy importantes de la Historia de España, sin olvidar, por supuesto, a sus amables pobladores que con su simpatía y amabilidad le harán pasar una jornada que nunca olvidaran.</li>
+        <li>Cáceres fue elegida Ciudad Patrimonio de la Humanidad en el año 1986 debido a su gran conjunto monumental histórico-artístico, donde el tiempo parece que se ha detenido para ofrecernos la urbe casi de la misma forma que la conocieron durante los siglos XV al XVIII. A través de la constancia y el trabajo realizado por la Administración autonómica, local y, sobre todo, por sus ciudadanos, nos encontramos ante un conjunto histórico que pasa por ser el Tercer Conjunto Monumental europeo declarado por el Consejo de Europa en el año 1968.</li>
+        <li>Aléjese de nuestro siglo XXI, olvide las preocupaciones actuales y déjese llevar por la Edad Media, el Renacimiento y el Barroco, la historia de nuestros antepasados puesta a su disposición, imagínese ataviado al gusto de la época medieval y moderna y disfrute de lo que a partir de ahora va a descubrir con todos sus sentidos sin pensar en nada más.</li>
+        <li>Bienvenidos a CÁCERES.</li>
+    </ul>
 </div>
-
+</div>
 <div data-role="page" id="page2">
-	<div class="ui-bar-a" data-role="header">
-		<h1 class="ui-bar-a">Monumentos</h1>
+<img src="Images/17864546.jpg" alt="Fondo de pantalla" id="bg" />
+	<div data-role="header">
+		<div id="menuprincipal" data-role="navbar" data-iconpos="top" class="menubar">
+            <ul>
+                <li>
+                    <a href="#page" data-transition="fade" data-theme="a" data-icon="star"
+                    class="ui-btn-active ui-state-persist">
+                        AudioGuía
+                    </a>
+                </li>
+                <li>
+                    <a href="#page1" data-transition="fade" data-theme="a" data-icon="forward">
+                        Ruta
+                    </a>
+                </li>
+                <li>
+                    <a href="/glosario.html" data-transition="fade" data-theme="a" data-icon="gear">
+                        Glosario
+                    </a>
+                </li>
+                <li>
+                    <a href="#page1" data-transition="fade" data-theme="a" data-icon="bars">
+                        Agenda
+                    </a>
+                </li>
+                <li>
+                    <a href="#page1" data-transition="fade" data-theme="a" data-icon="info">
+                        info
+                    </a>
+                </li>
+            </ul>
+        </div>
 	</div>
 	<div data-role="content">	
-        <ul data-role="listview" data-divider-theme="a" data-inset="true">
+		<ul data-role="listview" data-divider-theme="a" data-inset="true">
             <li data-role="list-divider" role="heading">
                 Selecciona para ver detalle
             </li>
-            <li data-theme="c">
-                <a href="#pageM1" data-transition="slide">
+            <li data-theme="e">
+                <a href="/01_PlazaMayor.html" data-transition="slide">
                     Plaza Mayor
                     <span class="ui-li-count">
                         ver y oir
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Ermita de la Paz y Torre de Bujaco
                     <span class="ui-li-count">
@@ -63,7 +275,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Torre de los Púlpitos y Arco de la Estrella
                     <span class="ui-li-count">
@@ -71,7 +283,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Muralla
                     <span class="ui-li-count">
@@ -79,7 +291,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Plaza de Santa María
                     <span class="ui-li-count">
@@ -87,7 +299,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Iglesia-Concatedral de Santa María
                     <span class="ui-li-count">
@@ -95,7 +307,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Palacio Episcopal
                     <span class="ui-li-count">
@@ -103,7 +315,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Palacio y Torre de Carvajal
                     <span class="ui-li-count">
@@ -111,7 +323,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Palacio de los Golfines de Abajo
                     <span class="ui-li-count">
@@ -119,7 +331,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Plaza de San Jorge y Casa de los Becerra
                     <span class="ui-li-count">
@@ -127,7 +339,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Iglesia de San Francisco Javier
                     <span class="ui-li-count">
@@ -135,7 +347,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Convento de la Compañía de Jesús
                     <span class="ui-li-count">
@@ -143,7 +355,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Casa del Sol o de los Solís
                     <span class="ui-li-count">
@@ -151,7 +363,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Casa de los Saavedra y Torre de los Sande
                     <span class="ui-li-count">
@@ -159,7 +371,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Casa Mudéjar
                     <span class="ui-li-count">
@@ -167,7 +379,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Palacio de los Golfines de Arriba
                     <span class="ui-li-count">
@@ -175,7 +387,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Puerta de Mérida
                     <span class="ui-li-count">
@@ -183,7 +395,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Palacio del Comendador de Alcuéscar o de los Marqueses de Torreorgaz
                     <span class="ui-li-count">
@@ -191,7 +403,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Iglesia de San Mateo
                     <span class="ui-li-count">
@@ -199,7 +411,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Torre de las Cigüeñas-Casa de los Cáceres-Ovando
                     <span class="ui-li-count">
@@ -207,7 +419,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Convento de San Pablo
                     <span class="ui-li-count">
@@ -215,7 +427,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Casa de las Veletas
                     <span class="ui-li-count">
@@ -223,7 +435,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Torre de los Pozos
                     <span class="ui-li-count">
@@ -231,7 +443,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Ermita de San Antonio y Barrio Viejo Judío
                     <span class="ui-li-count">
@@ -239,7 +451,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Arco del Cristo, Puerta del Río o del Concejo
                     <span class="ui-li-count">
@@ -247,7 +459,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Torre de la Puerta del Concejo
                     <span class="ui-li-count">
@@ -255,7 +467,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Torre de Espaderos y antigua Puerta de Coria
                     <span class="ui-li-count">
@@ -263,7 +475,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Palacio de Toledo-Moctezuma
                     <span class="ui-li-count">
@@ -271,7 +483,7 @@ body {
                     </span>
                 </a>
             </li>
-            <li data-theme="c">
+            <li data-theme="e">
                 <a href="#page1" data-transition="slide">
                     Fin de ruta monumental intramuros
                     <span class="ui-li-count">
@@ -281,54 +493,8 @@ body {
             </li>
         </ul>
     </div>		
-	</div>
-<div class="ui-bar-b" data-role="footer">
-		<h4 class="ui-bar-a">Cicerone de Cáceres</h4>
-	</div>
-</div>
-
-<div data-role="page" id="page3">
-	<div class="ui-bar-b" data-role="header">
-		<h1 class="ui-bar-a">Rutas</h1>
-	</div>
-	<div data-role="content">	
-		Contenido		
-	</div>
-	<div class="ui-bar-a" data-role="footer">
-		<h4 class="ui-bar-a">Cicerone de Cáceres</h4>
-	</div>
-</div>
-
-<div data-role="page" id="page4">
-	<div class="ui-bar-a" data-role="header">
-		<h1 class="ui-bar-a">Información</h1>
-	</div>
-	<div data-role="content">	
-		Contenido		
-	</div>
-	<div class="ui-bar-a" data-role="footer">
-		<h4 class="ui-bar-a">Cicerone de Cáceres</h4>
-	</div>
-</div>
-
-<div data-role="page" id="pageM1">
-	<div class="ui-bar-a" data-role="header">
-		<h1 class="ui-bar-a">Bienvenida a Cáceres, Ciudad Patrimonio de la Humanidad</h1>
-	</div>
-	<div data-role="content">
-	  <blockquote>
-	    <p align="justify">Bienvenidos a la ciudad  de Cáceres. Antes de comenzar la visita les damos la enhorabuena por haber  elegido esta ciudad cargada de historia. Deléitense con sus <strong>Palacios</strong>, sus <strong>Casas  Señoriales</strong>, sus <strong>iglesias</strong>, sus <strong>calles</strong> por donde han pasado <strong>personajes</strong> muy  importantes de la <strong>Historia de España</strong>, sin olvidar, por supuesto, a sus amables  pobladores que con su <strong>simpatía</strong> y <strong>amabilidad</strong> le harán pasar una jornada que  nunca olvidaran. </p>
-	    <p align="justify">Cáceres fue elegida  Ciudad Patrimonio de la Humanidad en el año 1986 debido a su gran <strong>conjunto  monumental histórico-artístico</strong>, donde el tiempo parece que se ha detenido para  ofrecernos la urbe casi de la misma forma que la conocieron durante los siglos  XV al XVIII. A través de la constancia y el trabajo realizado por la  Administración autonómica, local y, sobre todo, por sus ciudadanos, nos  encontramos ante un conjunto histórico que pasa por ser el <strong>Tercer Conjunto  Monumental europeo</strong> declarado por el Consejo de Europa en el año 1968.</p>
-	    <p align="justify">Aléjese de nuestro siglo  XXI, olvide las preocupaciones actuales y déjese llevar por la Edad Media, el  Renacimiento y el Barroco, la historia de nuestros antepasados puesta a su  disposición, imagínese ataviado al gusto de la época medieval y moderna y  disfrute de lo que a partir de ahora va a descubrir con todos sus sentidos sin  pensar en nada más, Bienvenidos a CÁCERES.</p>
-	    <p align="justify">&nbsp;</p>
-      </blockquote>
-      <p><em>DURACIÓN  AUDIOGUIA; <strong>1,37  minutos</strong></em><br>
-        <em>CONTEMPLACIÓN  VISUAL:-------</em><br>
-        <em>VISITA  INTERNA AL EDIFICIO;------</em><br>
-      <em>ITINERE  AL SIGUIENTE NÚMERO;------</em></p>
-  </div>
-	<div class="ui-bar-b" data-role="footer">
-		<h4 class="ui-bar-b">Cicerone de Cáceres</h4>
+	<div data-role="footer">
+		<h4>Pie de página</h4>
 	</div>
 </div>
 
