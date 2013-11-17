@@ -82,8 +82,6 @@ $(document).ready(function(){
 </script>
 </head> 
 <body>
-<div data-role="page" id="page">
-<img src="images/fondos_monumentos_01.jpg" alt="Fondo de pantalla" id="bg" />
 <div data-role="header">
     <div id="menuprincipal" data-role="navbar" data-iconos="top" class="menubar">
             <ul>
@@ -118,7 +116,7 @@ $(document).ready(function(){
     
 		
 	</div>
-<div data-role="content">
+<div data-role="content" style="background-color:#693d14">
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
 		<div id="jp_container_1" class="jp-audio">
@@ -163,6 +161,22 @@ $(document).ready(function(){
 			</div>
 		</div>
     </div>
+</div>
+<div data-role="content" style="background-color:#693d14">
+<!-- inicio Galeria imagenes popup -->
+<div><a href="#popup1" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_1.jpg" alt="Cáceres, España" style="width:30%"></a>
+<a href="#popup2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_2.jpg" alt="Cáceres, España" style="width:30%"></a>
+<a href="#popup3" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_3.jpg" alt="Cáceres, España" style="width:30%"></a>
+<div data-role="popup" id="popup1" data-overlay-theme="a" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_1.jpg" style="max-height:512px;" alt="Cáceres, España">
+</div>
+<div data-role="popup" id="popup2" data-overlay-theme="a" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_2.jpg" style="max-height:512px;" alt="Cáceres, España">
+</div>
+<div data-role="popup" id="popup3" data-overlay-theme="a" data-theme="d" data-corners="false">
+    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_3.jpg" style="max-height:512px;" alt="Cáceres, España">
+</div>
+</div> <!-- inicio Galeria imagenes popup -->
     <div data-role="collapsible" data-iconpos="right" data-theme="a" data-content-theme="e" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
     <h4>Recomendaciones</h4>
     <ul data-role="listview" data-inset="false">
@@ -178,10 +192,10 @@ $(document).ready(function(){
         <li>La forma del espacio es muy alargada y estrecha no cumpliendo así los cánones de las proporciones de las plazas mayores de España, siendo estas dimensionadas con las reglas de la sección áurea o aproximadas.</li>
     </ul>
     </div>
-    <div data-role="footer">
+</div>
+<div data-role="footer">
 		<h4>Audio Cicerone de Cáceres</h4>
 	</div>
 </div>
-
 </body>
 </html>
