@@ -84,42 +84,40 @@ $(document).ready(function(){
 </script>
 </head> 
 <body>
-<div data-role="page" id="page">
+<div data-role="page" id="inicio">
 <img src="images/fondo_inicio_cc.jpg" alt="Fondo de pantalla" id="bg" />
 <div data-role="header">
     <div id="menuprincipal" data-role="navbar" data-iconos="top" class="menubar">
             <ul>
                 <li>
-                    <a href="#page" data-transition="fade" data-theme="a" data-icon="star"
+                    <a href="#inicio" data-transition="fade" data-theme="a" data-icon="star"
                     class="ui-btn-active ui-state-persist">
                         AudioGuía
                     </a>
                 </li>
                 <li>
-                    <a href="/ruta.html" data-transition="fade" data-theme="a" data-icon="forward">
+                    <a href="#pageRUTA" data-transition="fade" data-theme="a" data-icon="forward">
                         Ruta
                     </a>
                 </li>
                 <li>
-                    <a href="/glosario.html" data-transition="fade" data-theme="a" data-icon="gear">
+                    <a href="#pageGLO" data-transition="fade" data-theme="a" data-icon="gear">
                         Glosario
                     </a>
                 </li>
                 <li>
-                    <a href="/agenda.html" data-transition="fade" data-theme="a" data-icon="bars">
+                    <a href="#pageAGENDA" data-transition="fade" data-theme="a" data-icon="bars">
                         Agenda
                     </a>
                 </li>
                 <li>
-                    <a href="/info.html" data-transition="fade" data-theme="a" data-icon="info">
+                    <a href="#pageINFO" data-transition="fade" data-theme="a" data-icon="info">
                         info
                     </a>
                 </li>
             </ul>
         </div>
-    
-		
-	</div>
+</div>
 <div data-role="content">
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
@@ -169,7 +167,7 @@ $(document).ready(function(){
             <li data-role="list-divider" role="heading">
             Monumentos y sitios de interés </li>
             <li data-theme="e">
-                <a href="#page2" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_.jpg" alt="inicio todos" name="ImagmenuTodos" width="80" height="80" id="ImagmenuTodos">
+                <a href="#pageM" id="Mtodos" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_.jpg" alt="inicio todos" name="ImagmenuTodos" width="80" height="80" id="ImagmenuTodos">
                     Todos
                     <span class="ui-li-count">
                         Ruta completa
@@ -177,7 +175,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_iglesias.jpg" alt="inicio iglesias" name="ImagmenuIglesias" width="80" height="80" id="ImagmenuIglesias">
+                <a href="#pageM" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_iglesias.jpg" alt="inicio iglesias" name="ImagmenuIglesias" width="80" height="80" id="ImagmenuIglesias">
                     Iglesias
                     <span class="ui-li-count">
                         Catedrales, conventos, hermitas
@@ -229,45 +227,46 @@ $(document).ready(function(){
 		<h4>Audio Cicerone de Cáceres</h4>
 	</div>
 </div>
-<div data-role="page" id="page2">
+<div data-role="page" id="pageM">
 	<div data-role="header">
 		<div id="menuprincipal" data-role="navbar" data-iconpos="top" class="menubar">
             <ul>
                 <li>
-                    <a href="#page" data-transition="fade" data-theme="a" data-icon="star"
+                    <a href="#inicio" data-transition="fade" data-theme="a" data-icon="star"
                     class="ui-btn-active ui-state-persist">
                         AudioGuía
                     </a>
                 </li>
                 <li>
-                    <a href="/ruta.html" data-transition="fade" data-theme="a" data-icon="forward">
+                    <a href="#pageRUTA" data-transition="fade" data-theme="a" data-icon="forward">
                         Ruta
                     </a>
                 </li>
                 <li>
-                    <a href="/glosario.html" data-transition="fade" data-theme="a" data-icon="gear">
+                    <a href="#pageGLO" data-transition="fade" data-theme="a" data-icon="gear">
                         Glosario
                     </a>
                 </li>
                 <li>
-                    <a href="/agenda.html" data-transition="fade" data-theme="a" data-icon="bars">
+                    <a href="#pageAGENDA" data-transition="fade" data-theme="a" data-icon="bars">
                         Agenda
                     </a>
                 </li>
                 <li>
-                    <a href="/info.html" data-transition="fade" data-theme="a" data-icon="info">
+                    <a href="#pageINFO" data-transition="fade" data-theme="a" data-icon="info">
                         info
                     </a>
                 </li>
             </ul>
         </div>
+</div>
 <div data-role="content">	
 	  <ul data-role="listview" data-divider-theme="a" data-inset="true">
             <li data-role="list-divider" role="heading">
                 Selecciona para ver detalle
             </li>
             <li data-theme="e">
-                <a href="/01.html" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
+                <a href="01.html" data-ajax="false" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Plaza Mayor
                     <span class="ui-li-count">
                         ver y oir
@@ -500,8 +499,191 @@ $(document).ready(function(){
             </li>
         </ul>
     </div>		
-	<div data-role="footer">
+<div data-role="footer">
 		<h4>Audio Cicerone de Cáceres</h4>
+	</div>
+</div>
+<div data-role="page" id="pageGLO">
+  <div data-role="header">
+		<div id="menuprincipal" data-role="navbar" data-iconpos="top" class="menubar">
+            <ul>
+                <li>
+                    <a href="#inicio" data-transition="fade" data-theme="a" data-icon="star">
+                        AudioGuía
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageRUTA" data-transition="fade" data-theme="a" data-icon="forward">
+                        Ruta
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageGLO" data-transition="fade" data-theme="a" data-icon="gear" class="ui-btn-active ui-state-persist">
+                        Glosario
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageAGENDA" data-transition="fade" data-theme="a" data-icon="bars">
+                        Agenda
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageINFO" data-transition="fade" data-theme="a" data-icon="info">
+                        info
+                    </a>
+                </li>
+            </ul>
+        </div>
+</div>
+<div data-role="content" style="background-image:url(/images/17864546.jpg)">
+  <h3 align="center">Glosario de términos utilizados en AudioGuía</h3>
+  <p align="center">(Usted encontrará un link en los textos en que aparezcon estos términos)</p>
+	  <p align="justify"><strong><a id="ALABASTRO"></a>ALABASTRO</strong>; Variedad de piedra blanca, no muy dura, compacta, a veces translúcida, de apariencia marmórea, que se usa para hacer esculturas o elementos de decoración arquitectónica.</p>
+      <p align="justify"><strong><a id="ALBARRANA"></a>ALBARRANA</strong>; Cada una de las torres que antiguamente se ponían a trechos en las murallas, a modo de baluartes muy fuertes. Fueron los almohades los que comenzaron a utilizar este tipo de torres que siempre estaban adelantadas al lienzo de muralla y unidas a ella por un paso superior. Con ello la defensa era aún más fuerte y los enemigos poco podían hacer ante este sistema defensivo.</p>
+      <p align="justify"><strong><a id="ALFIZ"></a>ALFIZ</strong>; Montura resaltada en el muro que, en la arquitectura árabe, encuadra los arcos de puertas y ventanas, arrancando bien de las impostas o bien del suelo.</p>
+      <p align="justify"><strong><a id="ARCOSOLIO"></a>ARCOSOLIO</strong>: Arco que, a manera de nicho, alberga un sepulcro generalmente incrustado en la pared. Su uso aparece en la época imperial romana.</p>
+      <p align="justify"><strong><a id="ARRABÁ"></a>ARRABÁ</strong>; Adorno que suele circunscribir el arco de las puertas y ventanas de estilo árabe.</p>
+      <p align="justify"><strong><a id="ASPILLERA"></a>ASPILLERA</strong>; Abertura larga y estrecha en un muro para disparar por ella para permitir la defensa protegiendo al defensor.</p>
+      <p align="justify"><strong><a id="BALAUSTRADA"></a>BALAUSTRADA</strong>; Conjunto de columnas pequeñas que con los barandales forman las barandillas o antepechos de balcones, azoteas, corredores y escaleras.</p>
+      <p align="justify"><strong><a id="BORLÓN"></a>BORLÓN</strong>; Tela de lino y algodón sembrada de borlitas.</p>
+      <p align="justify"><strong><a id="CARPANEL"></a>CARPANEL, ARCO</strong>; El que consta de varias porciones de circunferencia tangentes entre sí y trazadas desde distintos centros.</p>
+      <p align="justify"><strong><a id="CONTRAFUERTES"></a>CONTRAFUERTES</strong>; Construcción destinada a contrarrestar el excesivo empuje sufrido por una pared.</p>
+      <p align="justify"><strong><a id="CRESTERÍA"></a>CRESTERÍA</strong>; adorno continuo calado, de piedra, metal o cerámica, que se utilizó en la Edad Media y en el Renacimiento para rematar las partes altas de los edificios.</p>
+      <p align="justify"><strong><a id="CRUZ"></a>CRUZ LATINA</strong>; Corresponde al diseño utilizado en las iglesias en las que el brazo mayor, que se alinea con el pórtico principal, el atrio, el altar mayor y el ábside, tiene mayor longitud que el brazo menor o transepto; mientras que cuando ambas tienen la misma longitud se habla de planta de cruz griega.</p>
+      <p align="justify"><strong><a id="CUARTELES"></a>CUARTELES</strong>; Cada una de las cuatro partes de un escudo dividido en cruz. Cada una de las divisiones o subdivisiones de un escudo.</p>
+      <p align="justify"><strong><a id="ENTABLAMENTO"></a>ENTABLAMENTO</strong>; conjunto de piezas que gravitan inmediatamente sobre las columnas en la arquitectura arquitrabada. Se dividen en tres secciones: arquitrabe,friso y cornisa.</p>
+      <p align="justify"><strong><a id="ESPADAÑA"></a>ESPADAÑA</strong>; Pared elevada sobre la fachada, que sirve de campanario. Suele poseer uno o más vanos donde se sitúan las campanas.</p>
+      <p align="justify"><strong><a id="ESVIAJE"></a>ESVIAJE</strong>; Oblicuidad de la superficie de un muro o del eje de una bóveda respecto al frente de la obra de que forman parte.</p>
+      <p align="justify"><strong><a id="EVANGELIO"></a>EVANGELIO, LADO DEL</strong>; En las iglesias, mirando hacia el altar, el lado del Evangelio está situado a nuestra izquierda mientras que el lado de la Epístola es el que queda a nuestra derecha.</p>
+      <p align="justify"><strong><a id="JARRETERA"></a>JARRETERA</strong>; Liga con su hebilla, con que se ata la media o el calzón por el jarrete o la corva de la pierna.</p>
+      <p align="justify"><strong><a id="LAMBREQUINES"></a>LAMBREQUINES</strong>; Adorno, generalmente en forma de hojas de acanto, que baja de lo alto del casco y rodea el escudo. Representa las cintas con que se adornaba el yelmo, o la tela fija en él para defender la cabeza de los rayos del sol.</p>
+      <p align="justify"><strong><a id="MAINEL"></a>MAINEL</strong>; Columna o columnas interiores de un vano con múltiples aberturas.</p>
+      <p align="justify"><strong><a id="MAMPOSTERÍA"></a>MAMPOSTERÍA</strong>; fábrica de piedra sin labrar o con labra tosca, que se apareja o dispone de modo irregular. Cada una de las piedras recibe el nombre de mampuesto.</p>
+      <p align="justify"><strong><a id="MATACAN"></a>MATACAN</strong>; Obra voladiza en lo alto de un muro, de una torre o de una puerta fortificada, con parapeto y con suelo aspillerado, para observar y hostilizar al enemigo.</p>
+      <p align="justify"><strong><a id="MENSULONES"></a>MENSULONES</strong>; elemento sobresaliente de un muro que sostiene alguna pieza escultórica o arquitectónica.</p>
+      <p align="justify"><strong><a id="MERLONES"></a>MERLONES</strong>; Remate de las torres que servía para la defensa de los individuos cuando utilizaban las armas en el combate. El hueco entre merlones son conocidos como cañoneras.</p>
+      <p align="justify"><strong><a id="MUDÉJAR"></a>MUDÉJAR</strong>; musulmán que vivía en zona cristiana sin verse obligado a cambiar de religión a cambio de tributo económico. El Arte Mudéjar es el estilo arquitectónico que floreció en España desde el siglo XIII hasta el XVI, caracterizado por la conservación de elementos del arte cristiano y el empleo de la ornamentación árabe.</p>
+      <p align="justify"><strong><a id="PARTELUZ"></a>PARTELUZ</strong>; pequeña columna que divide la luz de una ventana o puerta.</p>
+      <p align="justify"><strong><a id="PIE"></a>PIE DERECHO</strong>; Cualquiera de los elementos verticales que constituyen el armazón o esqueleto de una pared o tabique.</p>
+      <p align="justify"><strong><a id="PINÁCULO"></a>PINÁCULO</strong>; Remate en la arquitectura gótica y, por extensión en otros estilos, adorno terminal, piramidal o cónico.</p>
+      <p align="justify"><strong><a id="ROCALLA"></a>ROCALLA</strong>; Decoración que imita contornos de piedras y de conchas.</p>
+      <p align="justify"><strong><a id="SILLAREJO"></a>SILLAREJO</strong>; Piedra labrada de una construcción, especialmente la que no atraviesa todo el grueso del muro y no tiene sino un paramento o dos cuando más.</p>
+      <p align="justify"><strong><a id="SOGA"></a>SOGA Y TIZÓN</strong>; Disposición del aparejo al exterior caracterizado por alternar hiladas de sillares por sus caras longitudinales con sillares por sus caras menores o transversales.</p>
+      <p align="justify"><strong><a id="TERCELETES"></a>TERCELETES</strong>; cada uno de los nervios de una bóveda de crucería que va desde cada uno de los ángulos de apoyo, donde se une con los nervios o arcos diagonales, hasta las claves secundarias de la bóveda uniéndose de dos en dos para formar un nervio secundario que va hasta la clave central.</p>
+      <p align="justify"><strong><a id="TESTERO"></a>TESTERO</strong>; Pared de un edificio que se encuentra frente a la entrada principal. También se le relaciona con el muro de la cabecera de la iglesia.</p>
+      <p align="justify"><strong><a id="YELMO"></a>YELMO</strong>; Parte de la armadura antigua que resguardaba la cabeza y el rostro, y se componía de morrión, visera y babera</p>
+	</div>
+<div data-role="footer">
+	  <h4>Pie de página</h4>
+	</div>
+</div>
+
+<div data-role="page" id="pageINFO">
+<div data-role="header">
+		<div id="menuprincipal" data-role="navbar" data-iconpos="top" class="menubar">
+            <ul>
+                <li>
+                    <a href="#inicio" data-transition="fade" data-theme="a" data-icon="star">
+                        AudioGuía
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageRUTA" data-transition="fade" data-theme="a" data-icon="forward">
+                        Ruta
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageGLO" data-transition="fade" data-theme="a" data-icon="gear">
+                        Glosario
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageAGENDA" data-transition="fade" data-theme="a" data-icon="bars">
+                        Agenda
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageINFO" data-transition="fade" data-theme="a" data-icon="info" class="ui-btn-active ui-state-persist">
+                        info
+                    </a>
+                </li>
+            </ul>
+        </div>
+</div>
+<div data-role="footer">
+	  <h4>Pie de página</h4>
+	</div>
+</div>
+<div data-role="page" id="pageRUTA">
+<div data-role="header">
+		<div id="menuprincipal" data-role="navbar" data-iconpos="top" class="menubar">
+            <ul>
+                <li>
+                    <a href="#inicio" data-transition="fade" data-theme="a" data-icon="star">
+                        AudioGuía
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageRUTA" data-transition="fade" data-theme="a" data-icon="forward" class="ui-btn-active ui-state-persist">
+                        Ruta
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageGLO" data-transition="fade" data-theme="a" data-icon="gear">
+                        Glosario
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageAGENDA" data-transition="fade" data-theme="a" data-icon="bars">
+                        Agenda
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageINFO" data-transition="fade" data-theme="a" data-icon="info">
+                        info
+                    </a>
+                </li>
+            </ul>
+        </div>
+</div>
+<div data-role="footer">
+	  <h4>Pie de página</h4>
+	</div>
+</div>
+<div data-role="page" id="pageAGENDA">
+<div data-role="header">
+		<div id="menuprincipal" data-role="navbar" data-iconpos="top" class="menubar">
+            <ul>
+                <li>
+                    <a href="#inicio" data-transition="fade" data-theme="a" data-icon="star">
+                        AudioGuía
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageRUTA" data-transition="fade" data-theme="a" data-icon="forward">
+                        Ruta
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageGLO" data-transition="fade" data-theme="a" data-icon="gear">
+                        Glosario
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageAGENDA" data-transition="fade" data-theme="a" data-icon="bars" class="ui-btn-active ui-state-persist">
+                        Agenda
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageINFO" data-transition="fade" data-theme="a" data-icon="info">
+                        info
+                    </a>
+                </li>
+            </ul>
+        </div>
+</div>
+<div data-role="footer">
+	  <h4>Pie de página</h4>
 	</div>
 </div>
 </body>

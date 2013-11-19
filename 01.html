@@ -82,41 +82,40 @@ $(document).ready(function(){
 </script>
 </head> 
 <body>
+<div data-role="page" id="pageM01" style="background-image:url(/images/17864546.jpg)">
 <div data-role="header">
     <div id="menuprincipal" data-role="navbar" data-iconos="top" class="menubar">
             <ul>
                 <li>
-                    <a href="/index.html" data-transition="fade" data-theme="a" data-icon="star"
+                    <a href="index.html" data-ajax="false" data-transition="fade" data-theme="a" data-icon="star"
                     class="ui-btn-active ui-state-persist">
                         AudioGuía
                     </a>
                 </li>
                 <li>
-                    <a href="/ruta.html" data-transition="fade" data-theme="a" data-icon="forward">
+                    <a href="index.html#pageRUTA" data-ajax="false" data-transition="fade" data-theme="a" data-icon="forward">
                         Ruta
                     </a>
                 </li>
                 <li>
-                    <a href="/glosario.html" data-transition="fade" data-theme="a" data-icon="gear">
+                    <a href="index.html#pageGLO" data-ajax="false" data-transition="fade" data-theme="a" data-icon="gear">
                         Glosario
                     </a>
                 </li>
                 <li>
-                    <a href="/agenda.html" data-transition="fade" data-theme="a" data-icon="bars">
+                    <a href="index.html#pageAGENDA" data-ajax="false" data-transition="fade" data-theme="a" data-icon="bars">
                         Agenda
                     </a>
                 </li>
                 <li>
-                    <a href="/info.html" data-transition="fade" data-theme="a" data-icon="info">
+                    <a href="index.html#pageINFO" data-ajax="false" data-transition="fade" data-theme="a" data-icon="info">
                         info
                     </a>
                 </li>
             </ul>
-        </div>
-    
-		
+        </div>		
 	</div>
-<div data-role="content" style="background-color:#693d14">
+<div data-role="content">
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
 		<div id="jp_container_1" class="jp-audio">
@@ -160,11 +159,10 @@ $(document).ready(function(){
 				</div>
 			</div>
 		</div>
-    </div>
 </div>
-<div data-role="content" style="background-color:#693d14">
 <!-- inicio Galeria imagenes popup -->
-<div><a href="#popup1" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_1.jpg" alt="Cáceres, España" style="width:30%"></a>
+<div data-role="content">
+<a href="#popup1" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_1.jpg" alt="Cáceres, España" style="width:30%"></a>
 <a href="#popup2" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_2.jpg" alt="Cáceres, España" style="width:30%"></a>
 <a href="#popup3" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_3.jpg" alt="Cáceres, España" style="width:30%"></a>
 <div data-role="popup" id="popup1" data-overlay-theme="a" data-theme="d" data-corners="false">
@@ -176,7 +174,7 @@ $(document).ready(function(){
 <div data-role="popup" id="popup3" data-overlay-theme="a" data-theme="d" data-corners="false">
     <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/imagenes_pop_01_3.jpg" style="max-height:512px;" alt="Cáceres, España">
 </div>
-</div> <!-- inicio Galeria imagenes popup -->
+</div> <!-- Fin Galeria imagenes popup -->
     <div data-role="collapsible" data-iconpos="right" data-theme="a" data-content-theme="e" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
     <h4>Recomendaciones</h4>
     <ul data-role="listview" data-inset="false">
@@ -195,7 +193,7 @@ $(document).ready(function(){
 </div>
 <div data-role="footer">
 		<h4>Audio Cicerone de Cáceres</h4>
-	</div>
+</div>
 </div>
 </body>
 </html>
