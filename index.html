@@ -84,8 +84,8 @@ $(document).ready(function(){
 </script>
 </head> 
 <body>
-<div data-role="page" id="inicio">
-<img src="images/fondo_inicio_cc.jpg" alt="Fondo de pantalla" id="bg" />
+<div data-role="page" id="inicio" style="background-image:url(/images/fondo_inicio_cc.jpg)">
+
 <div data-role="header">
     <div id="menuprincipal" data-role="navbar" data-iconos="top" class="menubar">
             <ul>
@@ -175,15 +175,15 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#pageM" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_iglesias.jpg" alt="inicio iglesias" name="ImagmenuIglesias" width="80" height="80" id="ImagmenuIglesias">
+                <a href="#pageM" id="Miglesias" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_iglesias.jpg" alt="inicio iglesias" name="ImagmenuIglesias" width="80" height="80" id="ImagmenuIglesias">
                     Iglesias
                     <span class="ui-li-count">
-                        Catedrales, conventos, hermitas
+                        Catedrales, conventos, ermitas
                     </span>
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio plazas" name="ImagmenuPlazas" width="80" height="80" id="ImagmenuPlazas">
+                <a href="#page1" id="Mplazas" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio plazas" name="ImagmenuPlazas" width="80" height="80" id="ImagmenuPlazas">
                     Plazas y Jardines
                     <span class="ui-li-count">
                         Espacios públicos
@@ -191,7 +191,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_muralla.jpg" alt="inicio muralla" name="ImagmenuMuralla" width="80" height="80" id="ImagmenuMuralla">
+                <a href="#page1" id="Mmuralla" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_muralla.jpg" alt="inicio muralla" name="ImagmenuMuralla" width="80" height="80" id="ImagmenuMuralla">
                     Muralla
                     <span class="ui-li-count">
                         Torres y arcos
@@ -199,7 +199,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_palacios.jpg" alt="inicio palacios" name="ImagmenuPalacios" width="80" height="80" id="ImagmenuPalacios">
+                <a href="#page1" id="Mpalacios" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_palacios.jpg" alt="inicio palacios" name="ImagmenuPalacios" width="80" height="80" id="ImagmenuPalacios">
                     Palacios
                     <span class="ui-li-count">
                         Casas señoriales
@@ -211,23 +211,21 @@ $(document).ready(function(){
     </div>
     <div data-role="collapsible" data-iconpos="right" data-theme="a" data-content-theme="e" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
     <h4>Recomendaciones</h4>
-    <ul data-role="listview" data-inset="false">
-        <li>Antes de comenzar la visita les damos la enhorabuena por haber elegido esta ciudad cargada de historia. Deléitense con sus Palacios, sus Casas Señoriales, sus iglesias, sus calles por donde han pasado personajes muy importantes de la Historia de España, sin olvidar, por supuesto, a sus amables pobladores que con su simpatía y amabilidad le harán pasar una jornada que nunca olvidaran.</li>
+        <p align="justify">Antes de comenzar la visita les damos la enhorabuena por haber elegido esta ciudad cargada de historia. Deléitense con sus <strong>Palacios</strong>, sus <strong>Casas Señoriales</strong>, sus<strong> iglesias</strong>, sus <strong>calles</strong> por donde han pasado personajes muy importantes de la Historia de España, sin olvidar, por supuesto, a sus amables pobladores que con su simpatía y amabilidad le harán pasar una jornada que nunca olvidaran.</p>
     </ul>
 </div>
         <div data-role="collapsible" data-iconpos="right" data-theme="a" data-content-theme="e" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
     <h4>Ver texto de Bienvenida</h4>
-    <ul data-role="listview" data-inset="false">
-        <li>Cáceres fue elegida Ciudad Patrimonio de la Humanidad en el año 1986 debido a su gran conjunto monumental histórico-artístico, donde el tiempo parece que se ha detenido para ofrecernos la urbe casi de la misma forma que la conocieron durante los siglos XV al XVIII. A través de la constancia y el trabajo realizado por la Administración autonómica, local y, sobre todo, por sus ciudadanos, nos encontramos ante un conjunto histórico que pasa por ser el Tercer Conjunto Monumental europeo declarado por el Consejo de Europa en el año 1968.</li>
-        <li>Aléjese de nuestro siglo XXI, olvide las preocupaciones actuales y déjese llevar por la Edad Media, el Renacimiento y el Barroco, la historia de nuestros antepasados puesta a su disposición, imagínese ataviado al gusto de la época medieval y moderna y disfrute de lo que a partir de ahora va a descubrir con todos sus sentidos sin pensar en nada más.</li>
-        <li>Bienvenidos a CÁCERES.</li>
+        <p align="justify"><img src="/images/sc_cc.png" width="70" height="70" alt="escudoCC" style="float:left;margin:10px;">Cáceres fue elegida <strong>Ciudad Patrimonio de la Humanidad</strong> en el año 1986 debido a su gran conjunto monumental histórico-artístico, donde el tiempo parece que se ha detenido para ofrecernos la urbe casi de la misma forma que la conocieron durante los siglos XV al XVIII. A través de la constancia y el trabajo realizado por la Administración autonómica, local y, sobre todo, por sus ciudadanos, nos encontramos ante un conjunto histórico que pasa por ser el <strong>Tercer Conjunto Monumental</strong> europeo declarado por el Consejo de Europa en el año 1968.</p>
+        <p align="justify">Aléjese de nuestro siglo XXI, olvide las preocupaciones actuales y déjese llevar por la <strong>Edad Media, el Renacimiento y el Barroco</strong>, la historia de nuestros antepasados puesta a su disposición, imagínese ataviado al gusto de la época medieval y moderna y disfrute de lo que a partir de ahora va a descubrir con todos sus sentidos sin pensar en nada más.</p>
+        <p align="justify"><strong>Bienvenidos a CÁCERES</strong>.</p>
     </ul>
 </div>
 <div data-role="footer">
 		<h4>Audio Cicerone de Cáceres</h4>
 	</div>
 </div>
-<div data-role="page" id="pageM">
+<div data-role="page" id="pageM" style="background-image:url(/images/fondos_papel.jpg)">
 	<div data-role="header">
 		<div id="menuprincipal" data-role="navbar" data-iconpos="top" class="menubar">
             <ul>
@@ -282,7 +280,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Torre de los Púlpitos y Arco de la Estrella
                     <span class="ui-li-count">
                         ver y oir
@@ -290,7 +288,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Muralla
                     <span class="ui-li-count">
                         ver y oir
@@ -298,7 +296,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Plaza de Santa María
                     <span class="ui-li-count">
                         ver y oir
@@ -306,7 +304,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Iglesia-Concatedral de Santa María
                     <span class="ui-li-count">
                         ver y oir
@@ -314,7 +312,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Palacio Episcopal
                     <span class="ui-li-count">
                         ver y oir
@@ -322,7 +320,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Palacio y Torre de Carvajal
                     <span class="ui-li-count">
                         ver y oir
@@ -330,7 +328,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Palacio de los Golfines de Abajo
                     <span class="ui-li-count">
                         ver y oir
@@ -338,7 +336,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Plaza de San Jorge y Casa de los Becerra
                     <span class="ui-li-count">
                         ver y oir
@@ -346,7 +344,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Iglesia de San Francisco Javier
                     <span class="ui-li-count">
                         ver y oir
@@ -354,7 +352,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Convento de la Compañía de Jesús
                     <span class="ui-li-count">
                         ver y oir
@@ -362,7 +360,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Casa del Sol o de los Solís
                     <span class="ui-li-count">
                         ver y oir
@@ -370,7 +368,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Casa de los Saavedra y Torre de los Sande
                     <span class="ui-li-count">
                         ver y oir
@@ -378,7 +376,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Casa Mudéjar
                     <span class="ui-li-count">
                         ver y oir
@@ -386,7 +384,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Palacio de los Golfines de Arriba
                     <span class="ui-li-count">
                         ver y oir
@@ -394,7 +392,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Puerta de Mérida
                     <span class="ui-li-count">
                         ver y oir
@@ -402,7 +400,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Palacio del Comendador de Alcuéscar o de los Marqueses de Torreorgaz
                     <span class="ui-li-count">
                         ver y oir
@@ -410,7 +408,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Iglesia de San Mateo
                     <span class="ui-li-count">
                         ver y oir
@@ -418,7 +416,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Torre de las Cigüeñas-Casa de los Cáceres-Ovando
                     <span class="ui-li-count">
                         ver y oir
@@ -426,7 +424,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Convento de San Pablo
                     <span class="ui-li-count">
                         ver y oir
@@ -434,7 +432,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Casa de las Veletas
                     <span class="ui-li-count">
                         ver y oir
@@ -442,7 +440,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Torre de los Pozos
                     <span class="ui-li-count">
                         ver y oir
@@ -450,7 +448,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Ermita de San Antonio y Barrio Viejo Judío
                     <span class="ui-li-count">
                         ver y oir
@@ -458,7 +456,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Arco del Cristo, Puerta del Río o del Concejo
                     <span class="ui-li-count">
                         ver y oir
@@ -466,7 +464,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Torre de la Puerta del Concejo
                     <span class="ui-li-count">
                         ver y oir
@@ -474,7 +472,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Torre de Espaderos y antigua Puerta de Coria
                     <span class="ui-li-count">
                         ver y oir
@@ -482,7 +480,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Palacio de Toledo-Moctezuma
                     <span class="ui-li-count">
                         ver y oir
@@ -490,7 +488,7 @@ $(document).ready(function(){
                 </a>
             </li>
             <li data-theme="e">
-                <a href="#page1" data-transition="slide">
+                <a href="#page1" data-transition="slide"><img src="https://dl.dropboxusercontent.com/u/4103763/imagesCICE/menus/imag_menus_80x80_plazas.jpg" alt="inicio01" name="Imagmenu01" width="80" height="80" id="Imagmenu01">
                     Fin de ruta monumental intramuros
                     <span class="ui-li-count">
                         ver y oir
@@ -535,7 +533,7 @@ $(document).ready(function(){
             </ul>
         </div>
 </div>
-<div data-role="content" style="background-image:url(/images/17864546.jpg)">
+<div data-role="content" style="background-image:url(/images/fondos_papel.jpg)">
   <h3 align="center">Glosario de términos utilizados en AudioGuía</h3>
   <p align="center">(Usted encontrará un link en los textos en que aparezcon estos términos)</p>
 	  <p align="justify"><strong><a id="ALABASTRO"></a>ALABASTRO</strong>; Variedad de piedra blanca, no muy dura, compacta, a veces translúcida, de apariencia marmórea, que se usa para hacer esculturas o elementos de decoración arquitectónica.</p>
@@ -574,7 +572,7 @@ $(document).ready(function(){
       <p align="justify"><strong><a id="YELMO"></a>YELMO</strong>; Parte de la armadura antigua que resguardaba la cabeza y el rostro, y se componía de morrión, visera y babera</p>
 	</div>
 <div data-role="footer">
-	  <h4>Pie de página</h4>
+	  <h4>Audio Cicerone de Cáceres</h4>
 	</div>
 </div>
 
@@ -610,8 +608,11 @@ $(document).ready(function(){
             </ul>
         </div>
 </div>
+<div data-role="content" style="background-image:url(/images/fondos_papel.jpg)">
+  <h3 align="center">Información, uso y contacto</h3>
+	</div>
 <div data-role="footer">
-	  <h4>Pie de página</h4>
+	  <h4>Audio Cicerone de Cáceres</h4>
 	</div>
 </div>
 <div data-role="page" id="pageRUTA">
@@ -646,8 +647,11 @@ $(document).ready(function(){
             </ul>
         </div>
 </div>
+<div data-role="content" style="background-image:url(/images/fondos_papel.jpg)">
+  <h3 align="center">Mapa</h3>
+	</div>
 <div data-role="footer">
-	  <h4>Pie de página</h4>
+	  <h4>Audio Cicerone de Cáceres</h4>
 	</div>
 </div>
 <div data-role="page" id="pageAGENDA">
@@ -682,8 +686,11 @@ $(document).ready(function(){
             </ul>
         </div>
 </div>
+<div data-role="content" style="background-image:url(/images/fondos_papel.jpg)">
+  <h3 align="center">Agenda de Actividades en Cáceres</h3>
+	</div>
 <div data-role="footer">
-	  <h4>Pie de página</h4>
+	  <h4>Audio Cicerone de Cáceres</h4>
 	</div>
 </div>
 </body>
