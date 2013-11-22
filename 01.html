@@ -64,8 +64,8 @@ $(document).ready(function(){
 <!-- Fin Player -->
 </head> 
 <body>
-<div data-role="page" id="pageM01" style="background-image:url(/images/fondos_papel.jpg)">
-<div data-role="header">
+<div data-role="page" id="pageM01" style="background-image:url(/images/fondos_papel.jpg)" data-ajax="false">
+<div data-role="header" data-position="fixed">
     <div id="menuprincipal" data-role="navbar" data-iconos="top" class="menubar">
             <ul>
                 <li>
@@ -120,9 +120,8 @@ $(document).ready(function(){
 </div>
     <div class="ui-block-b"><div class="" id="EntradillaInicio" style="height:100px">
       <h1>Paza Mayor</h1>
-      <h3>Ciudad patimonio de la Humanidad</h3>
     </div>
-    <a href="#popupMap" data-rel="popup" data-role="button" data-theme="a" data-inline="true" data-transition="pop">Ver en Mapa</a>
+    <a href="#popupMap" data-rel="popup" data-role="button" data-theme="a" data-inline="true" data-transition="pop">Ver Mapa o StreetView</a>
 <div data-role="popup" id="popupMap" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
 
     <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar</a>
