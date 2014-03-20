@@ -36,7 +36,7 @@ Las pistas pueden ser escuchadas infinitamente y están apoyadas por la edición
     <preference name="permissions"                value="none"/>
 
     <!-- Personaliza tu aplicación y la plataforma con el elemento de preferencias. -->
-    <preference name="phonegap-version"           value="3.0.0" />          <!-- todo: Versión actual de PhoneGap -->
+    <preference name="phonegap-version"           value="3.3.0" />          <!-- todo: Versión actual de PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- todos los medios : por defecto , tanto horizontal y vertical están activadas -->
     <preference name="target-device"              value="universal" />      <!-- todo: posibles valores teléfono , tableta, o universal -->
     <preference name="fullscreen"                 value="true" />           <!-- todos : oculta la barra de estado situada en la parte superior de la pantalla -->
